@@ -52,5 +52,9 @@
       <Project>{9868A338-CEE6-4D0F-841E-8DE8B5004509}</Project>
       <Name>Patterns.AbstractFactory</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Patterns.Adapter\Patterns.Adapter.csproj">
+      <Project>{0066A798-9C69-43FF-A1AC-30D1802313CB}</Project>
+      <Name>Patterns.Adapter</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

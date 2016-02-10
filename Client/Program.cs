@@ -3,6 +3,7 @@ using Patterns.Observer;
 using Patterns.FactoryMethod;
 using Patterns.Bridge;
 using Patterns.AbstractFactory;
+using Patterns.Adapter;
 
 namespace Client
 {
@@ -58,6 +59,16 @@ namespace Client
 				window.Draw();
 				Console.WriteLine ("---------------------------------------------------------");
 			#endregion
+
+			#region Adapter Pattern
+				var oldcar = new OldCar("Chevrolet", "Impala", new DateTime(1967, 1, 1));
+				var adapter = new OldNewAdapter(oldcar);
+				Console.WriteLine (adapter.getBrand());
+				Console.WriteLine (adapter.getYears());
+				Console.WriteLine ("---------------------------------------------------------");
+			#endregion
+
+
 		}
 	}
 }
