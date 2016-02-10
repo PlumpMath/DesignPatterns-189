@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2F918423-25EA-471E-A4F5-36D0AF404CD7}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Client</RootNamespace>
+    <AssemblyName>Client</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\Patterns.Observer\Patterns.Observer.csproj">
+      <Project>{A8F5B10D-E96F-418F-A089-91033397E090}</Project>
+      <Name>Patterns.Observer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Patterns.FactoryMethod\Patterns.FactoryMethod.csproj">
+      <Project>{C29FD6D4-99C4-4FEA-A810-0C06DDC5DE26}</Project>
+      <Name>Patterns.FactoryMethod</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Patterns.Bridge\Patterns.Bridge.csproj">
+      <Project>{975D9616-FFFA-49D9-8921-6D9BC22C78D3}</Project>
+      <Name>Patterns.Bridge</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Patterns.AbstractFactory\Patterns.AbstractFactory.csproj">
+      <Project>{9868A338-CEE6-4D0F-841E-8DE8B5004509}</Project>
+      <Name>Patterns.AbstractFactory</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
